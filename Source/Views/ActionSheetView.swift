@@ -41,6 +41,7 @@ final class ActionSheetView: UIView, AlertControllerViewRepresentable {
             self.labelsContainer.backgroundColor = backgroundColor
             self.primaryView.backgroundColor = backgroundColor
             self.cancelActionView.backgroundColor = backgroundColor
+            self.contentView.backgroundColor = backgroundColor
         }
     }
 
@@ -124,7 +125,7 @@ final class ActionSheetView: UIView, AlertControllerViewRepresentable {
         if self.message == nil {
             self.messageLabel.removeFromSuperview()
         }
-        self.labelsContainer.isHidden = noTextProvided || contentViewProvided
+        self.labelsContainer.isHidden = noTextProvided
         self.contentView.isHidden = !contentViewProvided
     }
 }
